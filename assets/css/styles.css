@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --primary-color: #FFF7F1;
+  --text-dark: #596FB7;
+  --text-light: #000000;
+  --white: #f6ebeb;
+  --max-width: 1200px;
+  --header-font: "Lora", serif;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  height: 6.2rem;
+  background-color: #FFF7F1;
+  
+}
+
+nav img {
+  max-width: 250px; /* Adjust the max-width to change the size of the logo */
+  background: none;
+}
+
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.link a {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+
+.link a:hover {
+  color: var(--text-dark);
+}
+
+.nav__logo {
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav__logo img {
+  margin: auto;
+  max-width:200px;
+  background: none;
+}
+
+.nav__logo h4 {
+  font-size: 1.5rem;
+  font-family: var(--header-font);
+  letter-spacing: 2px;
+  color: var(--text-dark);
+}
+
+.nav__logo p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--text-light);
+}
+
+
+
+.header {
+  margin-bottom: 10rem;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: slideshow 10s infinite; /* Animation to cycle through images */
+}
+
+/* Define keyframes for the slideshow animation */
+@keyframes slideshow {
+  0%, 20% {
+    background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* First image */
+  }
+  25%, 45% {
+    background-image: url("https://images.unsplash.com/photo-1596204976717-1a9ff47f74ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Second image */
+  }
+  50%, 70% {
+    background-image: url("https://plus.unsplash.com/premium_photo-1675744019071-6b26259e774b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Third image */
+  }
+  75%, 95% {
+    background-image: url("https://images.unsplash.com/photo-1618221710640-c0eaaa2adb49?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Fourth image */
+  }
+}
+
+
+
+.header__container {
+  min-height: 600px;
+  position: relative;
+}
+
+.header__content {
+  position: absolute;
+  bottom: -10rem;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  border: 10px solid var(--white);
+}
+
+.header__content h4 {
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--text-light);
+}
+
+.header__content h4::before {
+  position: absolute;
+  content: "";
+  bottom: -1rem;
+  left: 0;
+  height: 2px;
+  width: 40px;
+  background-color: var(--text-light);
+}
+
+.header__content h1 {
+  width: 100%;
+  max-width: 600px;
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.header__content h1 span {
+  font-style: italic;
+}
+
+.about__container {
+  padding: 10rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.about__content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.about__content h4 {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 5rem;
+  font-size: 1.5rem;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.about__content h4::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 2rem;
+  height: 100%;
+  width: 1rem;
+  background-color: var(--primary-color);
+}
+
+.about__image img {
+  margin: auto;
+  max-width: 400px;
+  outline: 2px solid var(--text-light);
+  outline-offset: 1rem;
+}
+
+
+
+.display__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.display__col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.display__content {
+  padding: 4rem 0;
+  flex: 1;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.display__col:nth-child(1) .display__content,
+.display__col:nth-child(3) .display__content {
+  background-color: #FFF7F1;
+}
+
+.display__col:nth-child(2) .display__content {
+  background-color: #FFF7F1;
+}
+
+.display__content h4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.display__content p {
+  font-style: italic;
+}
+
+.context-dark, .bg-gray-dark, .bg-primary {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+  color: #000000;
+}
+.nav-list li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.brand-logo-light {
+  width: 350px; /* Adjust the width to make the logo smaller */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures the logo is centered horizontally */
+  margin-bottom: 10px; /* Adjust the spacing between the logo and the text below */
+}
+
+
+.nav-list li a:hover:before {
+  margin-left: 0;
+  opacity: 10;
+  visibility: visible;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgba(14, 13, 13, 0.5);
+}
+.social-container .col {
+  border: 1px solid rgb(7, 0, 0);
+}
+.nav-list li a:before {
+  content: "\f14f";
+  font: 400 21px/1 "Material Design Icons";
+  color: #FFF7F1;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -28px;
+  margin-right: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .22s ease;
+}
