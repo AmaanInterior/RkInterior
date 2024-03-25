@@ -196,50 +196,22 @@
 </section>
         
 
-<!-- Footer -->
-<footer class="section footer-classic context-dark bg-image" style="background: #596FB7;">
-    <div class="container">
-      <div class="row row-30">
-        <div class="col-md-4 col-xl-5" >
-          <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="assets/images/Logo.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
-            <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
-            <!-- Rights-->
-            <p class="rights"><span>©  </span><span class="copyright-year">2024</span><span> </span><span>Rk interior</span><span>. </span><span>All Rights Reserved.</span></p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h5>Contacts</h5>
-          <dl class="contact-list">
-            <dt>Address:</dt>
-            <dd>02, Bharatiya Kamala Nagar, Antop Hill, Mumbai, Maharashtra 400037</dd>
-          </dl>
-          <dl class="contact-list">
-            <dt>email:</dt>
-            <dd><a href="mailto:#">rkinterior1988@gmail.com</a></dd>
-          </dl>
-          <dl class="contact-list">
-            <dt>phones:</dt>
-            <dd><a href="tel:#">+91 9699999810</a> <span>or</span> <a href="tel:#">1234567899</a>
-            </dd>
-          </dl>
-        </div>
-        <div class="col-md-4 col-xl-3">
-          <h5>Links</h5>
-          <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contacts</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row no-gutters social-container">
-      <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
-      <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
-      <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
-      <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
-    </div>
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          $("#footer-placeholder").load("footer.html");
+      });
+  </script>
+
+<div id="whatsapp-button"></div>
+<script>
+    // Fetch and inject footer content
+    $(function(){
+        $("#whatsapp-button").load("whatsapp.html");
+    });
+</script>
+  
   </body>
   </html>
