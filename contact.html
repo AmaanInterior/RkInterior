@@ -13,19 +13,38 @@
 <body>
 
 <!-- Header -->
-<nav>
-  <ul class="nav__links">
-      <a href="index.html"> 
-        <img src="assets/images/Logo.png" alt="logo" />
+<nav class="navbar navbar-expand-lg navbar-light  bsb-navbar bsb-navbar-caret">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="./assets/images/Logo.png" alt="BootstrapBrain Logo" width="135" height="44">
     </a>
-       
-        <li class="link"><a href="index.html">HOME</a></li>
-        <li class="link"><a href="projects.html">PROJECTS</a></li>
-        <li class="link"><a href="services.html">SERVICES</a></li>
-        <li class="link"><a href="contact.html">CONTACT</a></li>  
-        <li class="link"><a href="Video.html">VIDEOS</a></li>
-        <li class="link"><a href="about.html">ABOUT US</a></li>
-    </ul>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Video.html">Videos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
