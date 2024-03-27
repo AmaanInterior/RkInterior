@@ -9,7 +9,6 @@
   --header-font: "Lora", serif;
 }
 
-
 * {
   padding: 0;
   margin: 0;
@@ -35,62 +34,35 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-nav {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  height: 6.2rem;
-  background-color: #FFF7F1;
-  
+
+
+.navbar {
+  background-color: #FFF7F1 !important; /* Change navbar color */
+  padding-top: 5px; /* Decrease top padding */
+  padding-bottom: 5px; /* Decrease bottom padding */
 }
 
-nav img {
-  max-width: 250px; /* Adjust the max-width to change the size of the logo */
-  background: none;
+.navbar-brand img {
+  width: 200px; /* Change logo width */
+  height: auto; /* Maintain aspect ratio */
+  padding-top: -5px; /* Decrease top padding */
+  padding-bottom: -10px;
 }
 
-
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.link a {
-  font-weight: 500;
-  color: var(--text-light);
-  transition: 0.3s;
+@media (max-width: 992px) {
+  /* Adjusting styles for smaller screens */
+  .navbar-brand img {
+    width: 120px; /* Adjusted logo width for smaller screens */
+  }
 }
 
 
-.link a:hover {
-  color: var(--text-dark);
-}
 
-.nav__logo {
-  text-align: center;
-  cursor: pointer;
-}
 
-.nav__logo img {
-  margin: auto;
-  max-width:200px;
-  background: none;
-}
 
-.nav__logo h4 {
-  font-size: 1.5rem;
-  font-family: var(--header-font);
-  letter-spacing: 2px;
-  color: var(--text-dark);
-}
 
-.nav__logo p {
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: var(--text-light);
-}
+
+
 
 
 
@@ -118,17 +90,19 @@ nav img {
   }
 }
 
-
-
 .header__container {
   min-height: 600px;
   position: relative;
 }
 
 .header__content {
+  bottom: -10rem;
+}
+
+.header__content {
   position: absolute;
   bottom: -10rem;
-  padding: 2rem;
+  padding: 2rem; /* Adjust padding for smaller screens */
   background-color: var(--primary-color);
   border: 10px solid var(--white);
 }
@@ -136,8 +110,8 @@ nav img {
 .header__content h4 {
   position: relative;
   margin-bottom: 2rem;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1rem; /* Adjust font size for smaller screens */
+  font-weight: 200;
   letter-spacing: 2px;
   color: var(--text-light);
 }
@@ -148,15 +122,60 @@ nav img {
   bottom: -1rem;
   left: 0;
   height: 2px;
-  width: 40px;
+  width: 20px;
   background-color: var(--text-light);
 }
 
+@media screen and (max-width: 768px) {
+  .header__container {
+    min-height: 300px; /* Adjust min-height for smaller screens */
+  }
+
+  .header__content {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .header__content h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    margin-bottom: 3rem; /* Adjust margin for smaller screens */
+  }
+
+  .header__container {
+    min-height: 200px; /* Adjust min-height for even smaller screens */
+  }
+
+  .header__content {
+    bottom: -3rem; /* Adjust position for smaller screens */
+  }
+
+  .header__content h1 {
+    font-size: 2rem; /* Adjust font size for even smaller screens */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .header__content h4::before {
+    width: 4px; /* Adjust the width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__content h4::before {
+    width: 3px; /* Adjust the width for even smaller screens */
+  }
+}
+
 .header__content h1 {
-  width: 100%;
-  max-width: 600px;
-  font-size: 4rem;
-  font-weight: 400;
+  width: 80%;
+  max-width: 700px;
+  font-size: 2rem;
+  font-weight: 200;
   font-family: var(--header-font);
   color: var(--text-dark);
 }
@@ -165,7 +184,7 @@ nav img {
   font-style: italic;
 }
 
-button{
+button {
   display: inline-block;
   position: relative;
   background: none;
@@ -174,26 +193,24 @@ button{
   font-size: 18px;
   cursor: pointer;
   margin: 20px 3 0px;
-  background:rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.09);
 }
 
-
-
-button.btn-1 {
-  background: #596FB7; /* Change to desired color */
-}
-
+button.btn-1,
 button.btn-2 {
-  background: #596FB7; /* Change to desired color */
+  background: #596fb7; /* Change to desired color */
 }
 
-
-span{
+span {
   display: block;
-  padding: 20px 60px;
+  padding: 10px 30px;
 }
-button::before, button::after{
-  content:"";
+
+button::before,
+button::after,
+span::before,
+span::after {
+  content: "";
   width: 0;
   height: 2px;
   position: absolute;
@@ -201,120 +218,174 @@ button::before, button::after{
   background: #000000;
 }
 
-span::before, span::after{
-  content:"";
-  width:2px;
-  height:0;
+span::before,
+span::after {
+  content: "";
+  width: 2px;
+  height: 0;
   position: absolute;
   transition: all 0.2s linear;
   background: #000000;
 }
-button:hover::before, button:hover::after{
+
+button:hover::before,
+button:hover::after {
   width: 100%;
 }
-button:hover span::before, button:hover span::after{
+
+button:hover span::before,
+button:hover span::after {
   height: 100%;
 }
+
 /*----- button 1 -----*/
-.btn-1::before, .btn-1::after{
+.btn-1::before,
+.btn-1::after {
   transition-delay: 0.2s;
 }
-.btn-1 span::before, .btn-1 span::after{
+
+.btn-1 span::before,
+.btn-1 span::after {
   transition-delay: 0s;
 }
-.btn-1::before{
+
+.btn-1::before {
   right: 0;
   top: 0;
 }
-.btn-1::after{
+
+.btn-1::after {
   left: 0;
   bottom: 0;
 }
-.btn-1 span::before{
+
+.btn-1 span::before {
   left: 0;
   top: 0;
 }
-.btn-1 span::after{
+
+.btn-1 span::after {
   right: 0;
   bottom: 0;
 }
-.btn-1:hover::before, .btn-1:hover::after{
+
+.btn-1:hover::before,
+.btn-1:hover::after {
   transition-delay: 0s;
 }
-.btn-1:hover span::before, .btn-1:hover span::after{
+
+.btn-1:hover span::before,
+.btn-1:hover span::after {
   transition-delay: 0.2s;
 }
 
 /*--- Button 2 -------*/
 
-
-.btn-2::before, .btn-2::after{
-  transition-delay: 0s;
-}
-.btn-2 span::before, .btn-2 span::after{
-  transition-delay: 0.2s;
-}
-.btn-2::before{
-  right: 0;
-  top: 0;
-}
-.btn-2::after{
-  left: 0;
-  bottom: 0;
-}
-.btn-2 span::before{
-  left: 0;
-  top: 0;
-}
-.btn-2 span::after{
-  right: 0;
-  bottom: 0;
-}
-.btn-2:hover::before, .btn-2:hover::after{
-  transition-delay: 0.2s;
-}
-.btn-2:hover span::before, .btn-2:hover span::after{
+.btn-2::before,
+.btn-2::after {
   transition-delay: 0s;
 }
 
-.about__container {
-  padding: 10rem 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  align-items: center;
+.btn-2 span::before,
+.btn-2 span::after {
+  transition-delay: 0.2s;
 }
 
-.about__content p {
-  margin-bottom: 2rem;
-  color: var(--text-light);
-}
-
-.about__content h4 {
-  position: relative;
-  margin-bottom: 2rem;
-  padding-left: 5rem;
-  font-size: 1.5rem;
-  font-family: var(--header-font);
-  color: var(--text-dark);
-}
-
-.about__content h4::before {
-  position: absolute;
-  content: "";
+.btn-2::before {
+  right: 0;
   top: 0;
-  left: 2rem;
-  height: 100%;
-  width: 1rem;
-  background-color: var(--primary-color);
 }
 
-.about__image img {
-  margin: auto;
-  max-width: 400px;
-  outline: 2px solid var(--text-light);
-  outline-offset: 1rem;
+.btn-2::after {
+  left: 0;
+  bottom: 0;
 }
+
+.btn-2 span::before {
+  left: 0;
+  top: 0;
+}
+
+.btn-2 span::after {
+  right: 0;
+  bottom: 0;
+}
+
+.btn-2:hover::before,
+.btn-2:hover::after {
+  transition-delay: 0.2s;
+}
+
+.btn-2:hover span::before,
+.btn-2:hover span::after {
+  transition-delay: 0s;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .header__container {
+    min-height: 200px; /* Adjust min-height for smaller screens */
+  }
+
+  .header__content h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    margin-bottom: 3rem; /* Adjust margin for smaller screens */
+  }
+
+  .header__container {
+    min-height: 300px; /* Adjust min-height for even smaller screens */
+  }
+
+  .header__content {
+    bottom: -4rem; /* Adjust position
+    for smaller screens */
+  }
+
+  .header__content h1 {
+    font-size: 1rem; /* Adjust font size for even smaller screens */
+  }
+}
+
+
+
+
+
+.bsb-cta-2 .container {
+      padding: 20px;
+    }
+    
+    .bsb-cta-2 h2 {
+      font-size: 1.5rem; /* Adjust font size */
+    }
+    
+    .bsb-cta-2 h3 {
+      font-size: 2rem; /* Adjust font size */
+    }
+    
+    @media screen and (max-width: 768px) {
+      .bsb-cta-2 h2 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+      }
+      
+      .bsb-cta-2 h3 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+    }
+    
+    @media screen and (max-width: 576px) {
+      .bsb-cta-2 h2 {
+        font-size: 1rem; /* Adjust font size for even smaller screens */
+      }
+      
+      .bsb-cta-2 h3 {
+        font-size: 1.2rem; /* Adjust font size for even smaller screens */
+      }
+    }
 
 
 
@@ -358,48 +429,66 @@ button:hover span::before, button:hover span::after{
   font-style: italic;
 }
 
-.context-dark, .bg-gray-dark, .bg-primary {
-  color: rgba(0, 0, 0, 0.8);
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .display__container {
+    grid-template-columns: repeat(2, 1fr); /* Adjust number of columns for smaller screens */
+  }
+  
+  .display__content h4 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
 }
 
-.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
-  color: #000000;
-}
-.nav-list li {
-  padding-top: 15px;
-  padding-bottom: 1px;
-}
-
-.brand-logo-light {
-  width: 350px; /* Adjust the width to make the logo smaller */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensures the logo is centered horizontally */
-  margin-bottom: 10px; /* Adjust the spacing between the logo and the text below */
-}
-
-
-.nav-list li a:hover:before {
-  margin-left: 0;
-  opacity: 10;
-  visibility: visible;
-}
-
-ul, ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+@media screen and (max-width: 480px) {
+  .display__container {
+    grid-template-columns: repeat(1, 1fr); /* Adjust number of columns for even smaller screens */
+  }
+  
+  .display__content {
+    padding: 2rem 0; /* Adjust padding for smaller screens */
+  }
+  
+  .display__content h4 {
+    font-size: 1.5rem; /* Adjust font size for even smaller screens */
+  }
 }
 
 
-.nav-list li a:before {
-  content: "\f14f";
-  font: 400 21px/1 "Material Design Icons";
-  color: #FFF7F1;
-  display: inline-block;
-  vertical-align: baseline;
-  margin-left: -28px;
-  margin-right: 7px;
-  opacity: 0;
-  visibility: hidden;
-  transition: .22s ease;
+
+.container {
+  padding: 20px;
+  /* Add any other styles you have */
+}
+
+h1 {
+  font-size: 2rem; /* Adjust font size */
+}
+
+
+
+.logos {
+  flex: 0 0 auto;
+  margin-right: 10px; /* Increase the gap between logos */
+}
+
+.logos i {
+  font-size: 3rem; /* Set initial size of logos */
+}
+
+@media screen and (max-width: 768px) {
+  .logos i {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logos i {
+    font-size: 2rem; /* Adjust font size for even smaller screens */
+  }
+}
+
+.slider {
+  scroll-behavior: smooth; /* Add smooth scrolling effect */
+  animation-duration: 10s; /* Reduce animation speed */
 }
