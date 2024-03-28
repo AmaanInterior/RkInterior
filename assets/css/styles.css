@@ -62,7 +62,7 @@ body {
 @media (max-width: 992px) {
   /* Adjusting styles for smaller screens */
   .navbar-brand img {
-    width: 120px; /* Adjusted logo width for smaller screens */
+    width: 160px; /* Adjusted logo width for smaller screens */
   }
 }
 
