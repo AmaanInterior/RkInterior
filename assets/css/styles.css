@@ -42,6 +42,16 @@ body {
   padding-bottom: 5px; /* Decrease bottom padding */
 }
 
+.navbar-toggler {
+  font-size: 0.55rem; /* Adjust the font size as per your requirement */
+}
+
+.navbar-toggler-icon {
+  width: 0.2rem; /* Adjust the width of the icon */
+  height: 0.5rem; /* Adjust the height of the icon */
+}
+
+
 .navbar-brand img {
   width: 200px; /* Change logo width */
   height: auto; /* Maintain aspect ratio */
@@ -488,7 +498,3 @@ h1 {
   }
 }
 
-.slider {
-  scroll-behavior: smooth; /* Add smooth scrolling effect */
-  animation-duration: 10s; /* Reduce animation speed */
-}
